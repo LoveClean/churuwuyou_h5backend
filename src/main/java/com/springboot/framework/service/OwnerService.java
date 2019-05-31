@@ -15,4 +15,6 @@ public interface OwnerService {
     ResponseBO<Errors> updateBySession(OwnerDTO recordDTO);
 
     ResponseBO<Errors> updateByPhone(OwnerDTO recordDTO);
+
+    ResponseBO<Owner> selectByHouseNum(String buildingNum, String houseNum);
 }

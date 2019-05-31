@@ -58,9 +58,23 @@ public class OwnerServiceImpl implements OwnerService {
         //2.创建entity
         Owner record = new Owner(recordDTO);
         //3.响应校验
-        if (ownerMapper.updateByPhone(record.getPhone(),record.getWechatOpenid()) == 0) {
+        if (ownerMapper.updateByPhone(record.getPhone(), record.getWechatOpenid()) == 0) {
             return ResponseUtil.fail("失败");
         }
         return ResponseUtil.success(Errors.SUCCESS);
+    }
+
+    @Override
+    public ResponseBO<Owner> selectByHouseNum(String buildingNum, String houseNum) {
+        //2.创建entity
+        Owner record = new Owner();
+        record.setBuildingNum(buildingNum);
+        record.setHouseNum(houseNum);
+        record.setStatus((byte) 1);
+        record = ownerMapper.selectOne(record);
+        if (record == null) {
+            return ResponseUtil.fail("你所选择的业主不存在");
+        }
+        return ResponseUtil.success(record);
     }
 }

@@ -54,10 +54,10 @@ wechat:
 projectUrl:
   #  wechatMpAuthorize: http://wagyj.natapp1.cc
   # 微信微信公众平台授权回调redirect_url  后端url
-  wechatMpAuthorizeUrl: http://yf.179mall.cn/#/pages/index/visitorApply
-  ownerIndex: http://yf.179mall.cn/#/pages/personaCenter/visitorApplyManage
-  complain: http://yf.179mall.cn/#/pages/wuye/complain
-  repair: http://yf.179mall.cn/#/pages/wuye/repair
+  wechatMpAuthorizeUrl: http://crwy.yuanfudashi.com/#/pages/index/visitorApply
+  ownerIndex: http://crwy.yuanfudashi.com/#/pages/personaCenter/visitorApplyManage
+  complain: http://crwy.yuanfudashi.com/#/pages/wuye/complain
+  repair: http://crwy.yuanfudashi.com/#/pages/wuye/repair
   # 前端url
   webUrl: http://ly.179mall.cn:8080/#/
 

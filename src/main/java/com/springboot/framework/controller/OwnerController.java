@@ -79,4 +79,11 @@ public class OwnerController extends BaseController {
         super.setSessionUser(request, userBO);
         return ResponseUtil.success(userBO);
     }
+
+//    @ACS(allowAnonymous = true)
+    @ApiOperation(value = "根据房间号查看业主", notes = "")
+    @GetMapping(value = "selectByHouseNum")
+    public ResponseBO<Owner> selectByHouseNum(@RequestParam String buildingNum, @RequestParam String houseNum) {
+        return ownerService.selectByHouseNum(buildingNum, houseNum);
+    }
 }
